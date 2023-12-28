@@ -1,0 +1,14 @@
+{
+  allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date
+        }
+      excerpt(pruneLength: 250)
+      }
+    }
+  }
+}
+
