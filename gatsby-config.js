@@ -3,10 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `cloud-resume`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `sean mcleaish`,
+    siteUrl: `https://seanmcleaish.com`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap",{
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
@@ -25,5 +25,12 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  }, {
+    resolve: "gatsby-source-filesystem",
+    options: {
+    name: `blog`,
+    path: `${__dirname}/blog`,
+    },
+    __key: "blog"
   }]
 };
