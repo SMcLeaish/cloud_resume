@@ -1,10 +1,11 @@
 {
   allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
-    edges {
-      node {
+      nodes {
+        id
         frontmatter {
           title
-          date
+          date(formatString: "MMMM D, YYYY")
+          slug
           hero_image {
             childImageSharp {
               gatsbyImageData(width: 600, layout: CONSTRAINED)
@@ -16,6 +17,6 @@
         }
       excerpt(pruneLength: 250)
       }
-    }
+    
   }
 }
