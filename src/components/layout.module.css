@@ -18,9 +18,15 @@
 .nav-link-text {
   color: black;
 }
+
 .site-title {
-  font-size: 3rem;
-  color: gray;
+  font-size: 1.5rem;
+  color: #d3d3d3; 
+  width: 100%;
   font-weight: 700;
-  margin: 3rem 0;
+  margin: 1rem 0; 
+  padding-left: 1rem; 
+  background-color: #A9A9A9; 
+  border-bottom: 1px solid black; 
+  text-align: left; 
 }
