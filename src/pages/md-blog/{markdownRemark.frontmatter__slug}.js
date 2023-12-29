@@ -13,6 +13,7 @@ const BlogPost = ({ data, children }) => {
           image={image}
           alt={data.markdownRemark.frontmatter.hero_image_alt}
         />
+    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       {children}
     </Layout>
   )
@@ -21,6 +22,7 @@ const BlogPost = ({ data, children }) => {
 export const query = graphql`
   query ($id: String!) {
     markdownRemark(id: {eq: $id}) {
+      html
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
