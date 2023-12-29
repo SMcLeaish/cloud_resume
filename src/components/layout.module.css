@@ -5,17 +5,8 @@
 }
 
 .heading {
-  color: rebeccapurple;
+  color: #bd93f9;
 }
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
+.link {
+  color: #ffb86c;
 }
-.nav-link-item {
-  padding-right: 2rem;
-}
-.nav-link-text {
-  color: black;
-}
-

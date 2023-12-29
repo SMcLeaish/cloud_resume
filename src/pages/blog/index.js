@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import {link} from '../../components/layout.module.css'
 
 const BlogPage = ({ data }) => {
   return (
@@ -9,7 +10,7 @@ const BlogPage = ({ data }) => {
       {
         data.allMarkdownRemark.nodes.map(node => (
           <article key={node.id}>
-            <h2>
+            <h2 className={link}>
               <Link to={`/blog/${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
               </Link>
