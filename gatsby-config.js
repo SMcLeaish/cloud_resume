@@ -28,16 +28,9 @@ module.exports = {
   }, {
     resolve: 'gatsby-source-filesystem',
      options: {
-       "name": "md-blog",
+       "name": "blog",
        "path": "./content/blog"
      },
     __key: "md-blog"
-  }, {
-    resolve: "gatsby-source-filesystem",
-    options: {
-    name: `blog`,
-    path: `${__dirname}/blog`,
-    },
-    __key: "blog"
-  }]
+    }]
 };
