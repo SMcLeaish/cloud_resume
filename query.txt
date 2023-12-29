@@ -5,10 +5,17 @@
         frontmatter {
           title
           date
+          hero_image {
+            childImageSharp {
+              gatsbyImageData(width: 600, layout: CONSTRAINED)
+            }
+          }
+          hero_image_alt
+          hero_image_credit_text
+          hero_image_credit_link
         }
       excerpt(pruneLength: 250)
       }
     }
   }
 }
-
