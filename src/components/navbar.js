@@ -6,7 +6,6 @@ const Navbar = () => (
   <nav className={navbar}>
     <ul>
       <li><Link to="/" activeClassName={navbar.active}>Home</Link></li>
-      <li><Link to="/blog" activeClassName={navbar.active}>Blog</Link></li>
       <li><Link to="/about" activeClassName={navbar.active}>About Me</Link></li>
     </ul>
   </nav>
