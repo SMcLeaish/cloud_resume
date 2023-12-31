@@ -1,30 +1,17 @@
 import * as React from "react";
-// import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
-  heading,
-//  navLinks,
-//  navLinkItem,
-//  navLinkText,
+  content,
+  header,
 } from "./layout.module.css";
 import Navbar from "./navbar";
-const Layout = ({ pageTitle, children }) => {
-  /*const data = useStaticQuery(graphql`*/
-    /*query {*/
-      /*site {*/
-        /*siteMetadata {*/
-          /*title*/
-        /*}*/
-      /*}*/
-    /*}*/
-  /*`);*/
-
+const Layout = ({ headerContent, children }) => {
   return (
     <>
       <Navbar />
       <div className={container}>
-       <main>
-          <h1 className={heading}>{pageTitle}</h1>
+        {headerContent && <header className={header}>{headerContent}</header>}
+        <main className={content}>
           {children}
         </main>
       </div>

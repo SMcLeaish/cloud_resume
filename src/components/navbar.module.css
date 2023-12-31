@@ -2,8 +2,11 @@
 .navbar {
     background-color: #21222d;
     overflow: hidden;
-    font-family: Arial, sans-serif;
     color: #f8f8f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
 .navbar ul {
@@ -31,9 +34,43 @@
     background-color: #555;
 }
 
+.navbarIcons a {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbarIcons a img {
+    height: 24px;
+    width: 24px;
+ transition: transform 0.3s ease, fill 0.3s ease; 
+}
+
+.navbarIcons a:hover img {
+  transform: scale(1.2); 
+}
+
 @media screen and (max-width: 600px) {
-    .navbar ul {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbarIcons {
+        order: 1;
         width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .navbar ul {
+        width: 100%;
+        flex-direction: column;
+        order: 2;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
     }
 }

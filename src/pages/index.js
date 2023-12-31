@@ -1,29 +1,47 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-//import { StaticImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Link, graphql } from 'gatsby'
 import Seo from '../components/seo'
 import {link} from '../components/layout.module.css'
-
+import {postcontainer} from '../components/post.module.css'
 const IndexPage = ({data}) => {
   return (
     <>
-    <Layout pageTitle="sean mcleaish">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
+    <Layout pageTitle="sean mcleaish"
+    headerContent={
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <StaticImage
+        src="../images/selfie.jpeg" 
+        alt="sean mcleaish"
+        style={{
+          borderRadius: '50%', 
+          width: '50%', 
+          height: '50%', 
+          marginRight: '1rem', 
+        }}
+        imgStyle={{ borderRadius: '50%' }}
+      />
+      <div>
+        <h1>sean mcleaish</h1>
+        <p>I'm a soldier leaving the military for software development. This blog is to share what I'm learning along the way.</p>
+      </div>
+    </div>
+  }    >
     {/*  <StaticImage
         alt="Clifford, a reddish-brown pitbull, dozing in a bean bag chair"
         src="../images/kitten.jpg"
       /> */}
       {
         data.allMarkdownRemark.nodes.map(node => (
-          <article key={node.id}>
+        <Link to={`/blog/${node.frontmatter.slug}`}>
+          <article key={node.id} className={postcontainer}>
             <h2 className={link}>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
-              </Link>
             </h2>
             <p>Posted: {node.frontmatter.date}</p>
           </article>
+        </Link>
         ))
       }
 
