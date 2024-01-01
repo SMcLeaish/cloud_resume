@@ -1,12 +1,18 @@
 /* Navbar.module.css */
 .navbar {
     background-color: #21222d;
+    box-sizing: border-box;
     overflow: hidden;
     color: #f8f8f2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .navbar ul {
