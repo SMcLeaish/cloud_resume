@@ -22,7 +22,7 @@ const IndexPage = ({data}) => {
         }}
         imgStyle={{ borderRadius: '50%' }}
       />
-      <div>
+      <div classname>
         <h1>sean mcleaish</h1>
         <p>I'm a soldier figuring out how to be a software developer. This blog is to share what I'm learning along the way.</p>
       </div>
