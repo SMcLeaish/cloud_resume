@@ -11,7 +11,7 @@ module.exports = {
     options: {
       "icon": "src/images/wq-favicon-32x32.png"
     }
-  }, "gatsby-transformer-remark", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-plugin-preload-fonts", "gatsby-transformer-sharp", {
+  }, "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-plugin-preload-fonts", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
