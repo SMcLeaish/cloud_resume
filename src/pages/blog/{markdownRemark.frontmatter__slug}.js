@@ -2,17 +2,25 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
+import {imageWrapper, imageAttributionWrapper} from './blog.module.css'
 import Seo from '../../components/seo'
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.markdownRemark.frontmatter.hero_image)
+  const imageAttribution = data.markdownRemark.frontmatter.hero_image_credit_text;
   return (
     <Layout pageTitle={data.markdownRemark.frontmatter.title}>
-      <p>{data.markdownRemark.frontmatter.date}</p>
-    <GatsbyImage
-          image={image}
-          alt={data.markdownRemark.frontmatter.hero_image_alt}
-        />
+    <div className={imageWrapper}>
+      <GatsbyImage
+      image={image}
+      alt={data.markdownRemark.frontmatter.hero_image_alt}
+      />{imageAttribution && (
+          <div className={imageAttributionWrapper}>
+              {imageAttribution}
+          </div>
+      )}
+    </div>
+    <p>Posted {data.markdownRemark.frontmatter.date}</p>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       {children}
     </Layout>

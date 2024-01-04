@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { navbar, navbarIcons} from "./navbar.module.css"
+//import emailIcon from "../images/email.svg"
 import linkedinIcon from "../images/linkedin.svg"
 import githubIcon from "../images/square-github.svg"
 

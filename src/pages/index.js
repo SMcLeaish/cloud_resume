@@ -22,12 +22,12 @@ const IndexPage = ({data}) => {
         }}
         imgStyle={{ borderRadius: '50%' }}
       />
-      <div classname>
+      <div>
         <h1>sean mcleaish</h1>
-        <p>I'm a soldier figuring out how to be a software developer. This blog is to share what I'm learning along the way.</p>
+        <p>I'm a soldier figuring out software development. This blog is to share what I'm learning along the way.</p>
       </div>
     </div>
-  }    >
+  }>
           {
         data.allMarkdownRemark.nodes.map(node => (
         <Link to={`/blog/${node.frontmatter.slug}`}>

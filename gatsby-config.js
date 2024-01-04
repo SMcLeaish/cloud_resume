@@ -9,7 +9,7 @@ module.exports = {
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap",{
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/wq-favicon-32x32.png"
     }
   }, "gatsby-transformer-remark", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-plugin-preload-fonts", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

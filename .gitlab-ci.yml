@@ -1,0 +1,28 @@
+stages:
+  - build
+  - deploy
+
+build_site:
+  stage: build
+  image: node:latest
+  script:
+    - npm install -g gatsby-cli
+    - npm install
+    - gatsby build
+  artifacts:
+    paths:
+      - public/
+  only:
+    - main
+
+deploy_to_s3:
+  stage: deploy
+  image: python:latest
+  script:
+    - pip install awscli
+    - aws s3 sync public/ s3://sm-gl-blog --delete
+    - aws cloudfront create-invalidation --distribution-id E1HYIGS8Z6HI09 --paths "/*"
+  dependencies:
+    - build_site
+  only:
+    - main

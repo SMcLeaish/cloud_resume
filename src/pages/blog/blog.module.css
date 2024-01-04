@@ -1,0 +1,17 @@
+
+/* blog.module.css */
+.imageWrapper {
+  display: block; /* change this to block if you want to center the wrapper on the page */
+  width: fit-content; /* This will make the wrapper's width fit its content */
+  margin-left: auto; /* These two margins center the block-level wrapper */
+  margin-right: auto;
+  margin-bottom: 5em;
+}
+
+.imageAttributionWrapper {
+  font-size: 0.75em; /* Smaller text */
+  font-style: italic; /* Italicize text */
+  text-align: right; /* Right-align text */
+  display: block; /* Ensure this is a block element to allow text-align to work */
+  margin-top: 0.5em; /* Adjust as needed for spacing */
+}

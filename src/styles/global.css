@@ -15,8 +15,8 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-a {
-  color: inherit;
+a{
+  color: inherited;
   text-decoration: none;
 }
 
